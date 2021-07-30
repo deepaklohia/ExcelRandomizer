@@ -1,0 +1,15 @@
+
+Dim strtnumber As Long
+Dim endnumber As Long
+Dim rslt As Long
+Dim rsltString As String
+
+strtnumber = Sheet1.Range("A1")
+endnumber = Sheet1.Range("A2")
+
+rslt = (endnumber - strtnumber) * VBA.Rnd + strtnumber
+
+If VBA.InStr(rsltString, rslt) = 0 Then
+    MsgBox rslt
+    rsltString = rsltString + ", " + CStr(rslt)
+End If
